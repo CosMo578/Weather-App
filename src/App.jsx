@@ -4,10 +4,10 @@ import { Article } from "./components/Article";
 import { Aside } from "./components/Aside";
 import { useState } from "react";
 import "./App.css";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const queryClient = new QueryClient();
+// const queryClient = new QueryClient();
 
 function App() {
   const [input, setInput] = useState("");
@@ -57,7 +57,7 @@ function App() {
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
+    // <QueryClientProvider client={queryClient}>
       <div className="min-h-screen bg-sky-100 text-white">
         <Header />
         <Article>
@@ -77,8 +77,8 @@ function App() {
           />
         </Article>
       </div>
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+      // <ReactQueryDevtools initialIsOpen={false} />
+    // </QueryClientProvider>
   );
 }
 

@@ -51,7 +51,7 @@ export function WeatherDetails({ DaysForecast, cityName, isFetching }) {
 
       <section>
         <h2 className="mt-4 text-2xl font-bold text-black">
-          {DaysForecast.length - 1}-Day Forecast
+          {DaysForecast?.length - 1}-Day Forecast
         </h2>
         <div className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {isFetching ? (

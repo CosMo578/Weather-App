@@ -54,7 +54,8 @@ export function Aside({
         />
         <button
           type="submit"
-          className="w-full rounded-md border-2 border-sky-600 bg-sky-600 py-4 text-lg font-semibold transition-colors duration-300 ease-out hover:bg-transparent hover:text-sky-600">
+          className="w-full rounded-md border-2 border-sky-600 bg-sky-600 py-4 text-lg font-semibold transition-colors duration-300 ease-out hover:bg-transparent hover:text-sky-600"
+        >
           Search
         </button>
         <div className="relative my-4 py-4">
@@ -66,7 +67,8 @@ export function Aside({
       </form>
       <button
         onClick={getUserCoordinates}
-        className="w-full rounded-md border-2 border-gray-500 bg-gray-500 py-4 text-lg font-semibold transition-colors duration-300 ease-out hover:bg-transparent hover:text-gray-500">
+        className="w-full rounded-md border-2 border-gray-500 bg-gray-500 py-4 text-lg font-semibold transition-colors duration-300 ease-out hover:bg-transparent hover:text-gray-500"
+      >
         Use Current Location
       </button>
     </aside>

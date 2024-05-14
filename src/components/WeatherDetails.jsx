@@ -1,4 +1,9 @@
-export function WeatherDetails({ DaysForecast, cityName, isFetching }) {
+export function WeatherDetails({
+  DaysForecast,
+  cityName,
+  isFetching,
+  currLoc,
+}) {
   return (
     <main className="mt-8 md:col-span-2">
       {!isFetching ? (
@@ -11,8 +16,8 @@ export function WeatherDetails({ DaysForecast, cityName, isFetching }) {
               >
                 <div className="flex w-4/5 flex-col gap-3">
                   <span className="text-2xl md:text-4xl">
-                    {cityName.toUpperCase()} ({" "}
-                    {weatherItem.dt_txt.split(" ")[0]} )
+                    {cityName ? cityName.toUpperCase() : currLoc.toUpperCase()}{" "}
+                    ( {weatherItem.dt_txt.split(" ")[0]} )
                   </span>
                   <span>Temperature: {weatherItem.main.temp} °C</span>
                   <span>
@@ -51,7 +56,7 @@ export function WeatherDetails({ DaysForecast, cityName, isFetching }) {
 
       <section>
         <h2 className="mt-4 text-2xl font-bold text-black">
-          {DaysForecast?.length - 1}-Day Forecast
+          {!DaysForecast ? DaysForecast.length - 1 : '5'} - Day Forecast
         </h2>
         <div className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {isFetching ? (
